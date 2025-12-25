@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build GTK app",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "main.c",
+        "-o",
+        "main.exe",
+        "`pkg-config --cflags --libs gtk+-3.0`"
+      ],
+      "options": {
+        "shell": {
+          "executable": "C:\\msys64\\usr\\bin\\bash.exe",
+          "args": ["-c"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build using GTK+ 3 and pkg-config in MSYS2"
+    }
+  ]
+}
